@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gitlabmonitor:
+    image: timoschwarzer/gitlab-monitor
+    user: root
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - "9999:80"
+
+
